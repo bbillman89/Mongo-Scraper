@@ -1,0 +1,35 @@
+a, ul {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  background-color: #1e3000;
+  height: 75pt;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+header nav {
+  display: flex;
+  margin: 0pt 20pt;
+}
+header nav li {
+  display: inline;
+}
+
+.title-section {
+  background: url("../img/AdobeStock_226120378_Preview.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title-section h1 {
+  color: white;
+  font-size: 35pt;
+}
+
+/*# sourceMappingURL=main.css.map */

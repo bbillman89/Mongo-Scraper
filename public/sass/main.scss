@@ -1,0 +1,44 @@
+$font-primary: Bookman, URW Bookman L, serif;
+$primary-color: #1e3000;
+//font sizes
+$main-header: 35pt;
+$sub-header: 25pt;
+$content-main: 16pt;
+
+a, ul {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    background-color: $primary-color;
+    height: 75pt;
+    color: white;
+    display: flex;
+    align-items: center;
+    
+    nav {
+        display: flex;
+        margin: 0pt 20pt;
+        
+        li {
+            display: inline;
+        }
+    }
+}
+
+
+.title-section {
+    background: url("../img/AdobeStock_226120378_Preview.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    h1 {
+        color: white;
+        font-size: $main-header;
+    }
+}
