@@ -1,9 +1,29 @@
-$font-primary: Bookman, URW Bookman L, serif;
-$primary-color: #1e3000;
-//font sizes
+//font stuff
 $main-header: 35pt;
 $sub-header: 25pt;
 $content-main: 16pt;
+$font-primary: 'Montserrat', sans-serif;
+$font-bold: 600;
+//color stuff
+$primary-color: #152200;
+$secondary-color: #9fbe6a;
+//spacing stuff
+$content-padding: 20pt;
+
+* {
+    font-family: $font-primary !important;
+    color: $primary-color;
+}
+
+body {
+    margin-bottom: 20pt;
+}
+
+h1 {
+    font-size: $main-header;
+    font-weight: $font-bold;
+    color: white;
+}
 
 a, ul {
     text-decoration: none;
@@ -21,8 +41,34 @@ header {
         display: flex;
         margin: 0pt 20pt;
         
+        h1 {
+            font-size: $sub-header;
+        }
+
+        ul {
+            padding-top: 8pt;
+        }
+        
         li {
             display: inline;
+            font-size: $content-main;
+        }
+
+        h1, li, button {
+            margin-right: 30pt;
+        }
+
+        button {
+            padding: 5pt 10pt;
+            font-size: $content-main;
+            background-color: #365702;
+            color: white;
+            border: none;
+        }
+
+        button:hover {
+            cursor: pointer;
+            transition: 1s;
         }
     }
 }
@@ -32,13 +78,37 @@ header {
     background: url("../img/AdobeStock_226120378_Preview.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300pt;
+    height: 200pt;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     h1 {
-        color: white;
-        font-size: $main-header;
+        text-shadow: 5px 5px 9px $primary-color;
+    }
+}
+
+.article-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 20pt;
+
+    article[data-id] {
+        background-color: white;
+        margin-top: 20pt;
+        
+        .article-title {
+            padding: $content-padding;
+            font-size: $sub-header;
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+        
+        .article-summary {
+            border: 3pt solid #d4d4d4;
+            border-top: none;
+            padding: $content-padding;
+            font-size: $content-main;
+        }
     }
 }

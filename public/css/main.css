@@ -1,10 +1,25 @@
+* {
+  font-family: "Montserrat", sans-serif !important;
+  color: #152200;
+}
+
+body {
+  margin-bottom: 20pt;
+}
+
+h1 {
+  font-size: 35pt;
+  font-weight: 600;
+  color: white;
+}
+
 a, ul {
   text-decoration: none;
   color: white;
 }
 
 header {
-  background-color: #1e3000;
+  background-color: #152200;
   height: 75pt;
   color: white;
   display: flex;
@@ -14,22 +29,64 @@ header nav {
   display: flex;
   margin: 0pt 20pt;
 }
+header nav h1 {
+  font-size: 25pt;
+}
+header nav ul {
+  padding-top: 8pt;
+}
 header nav li {
   display: inline;
+  font-size: 16pt;
+}
+header nav h1, header nav li, header nav button {
+  margin-right: 30pt;
+}
+header nav button {
+  padding: 5pt 10pt;
+  font-size: 16pt;
+  background-color: #365702;
+  color: white;
+  border: none;
+}
+header nav button:hover {
+  cursor: pointer;
+  transition: 1s;
 }
 
 .title-section {
   background: url("../img/AdobeStock_226120378_Preview.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 300pt;
+  height: 200pt;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .title-section h1 {
-  color: white;
-  font-size: 35pt;
+  text-shadow: 5px 5px 9px #152200;
+}
+
+.article-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 20pt;
+}
+.article-container article[data-id] {
+  background-color: white;
+  margin-top: 20pt;
+}
+.article-container article[data-id] .article-title {
+  padding: 20pt;
+  font-size: 25pt;
+  background-color: #9fbe6a;
+  color: #152200;
+}
+.article-container article[data-id] .article-summary {
+  border: 3pt solid #d4d4d4;
+  border-top: none;
+  padding: 20pt;
+  font-size: 16pt;
 }
 
 /*# sourceMappingURL=main.css.map */
