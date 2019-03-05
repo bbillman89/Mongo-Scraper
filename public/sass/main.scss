@@ -65,9 +65,11 @@ header {
             color: white;
             border: none;
         }
-
+        
         button:hover {
             cursor: pointer;
+            background-color: $secondary-color;
+            color: black;
             transition: 1s;
         }
     }

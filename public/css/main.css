@@ -51,6 +51,8 @@ header nav button {
 }
 header nav button:hover {
   cursor: pointer;
+  background-color: #9fbe6a;
+  color: black;
   transition: 1s;
 }
 
