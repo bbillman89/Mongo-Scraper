@@ -6,7 +6,23 @@ module.exports = function(app){
 
     //Scraping the site
     app.get('/scrape', function(req, res){
-        axios.get("https://www.nps.gov/index.htm").then(function(response){
+        
+        axios.get('https://old.reddit.com/r/webdev/').then(function(response){
+            let $ = cheerio.load(response.data);
+            let results = [];
+            $('p.title').each(function(ind, ele){
+                let title = $(ele).text();
+                let link = $(ele).children().attr('href');
+                results.push({
+                    title: title,
+                    link: link
+                });
+            });
+            console.log(results);
+        });
+
+
+        /*axios.get("https://www.nps.gov/index.htm").then(function(response){
             var $ = cheerio.load(response.data);
 
             $('div .Feature').each(function(ind, ele){
@@ -26,7 +42,7 @@ module.exports = function(app){
                     console.log(e);
                 })
             })
-        })
+        })*/
     })
 
     //Get all articles from the db

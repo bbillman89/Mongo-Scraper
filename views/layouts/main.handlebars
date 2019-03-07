@@ -12,48 +12,6 @@
     <script src="./js/main.js"></script>
 </head>
 <body>
-    
-    <header>
-        <nav>
-            <h1>
-                Mongo Scraper
-            </h1>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/saved">Saved Articles</a></li>
-            </ul>
-            <button id="scrape">
-                Scrape New Articles
-            </button>
-            <button id="clear">
-                Clear Articles
-            </button>
-        </nav>
-    </header>
-
-    <section class="title-section">
-        <h1>Nation Park Service - Article Scraping</h1>
-    </section>
-
-    <section class="article-container">
-        {{!-- This is where the article.handlebars will load --}}
-        <article data-id="test">
-            <h1 class="article-title">
-                Sample Article Title
-            </h1>
-            <p class="article-summary">
-                The article summary will go here. This will not show the full body. Maybe add a 'read more' button...
-            </p>
-        </article>
-        <article data-id="test">
-            <h1 class="article-title">
-                Sample Article Title
-            </h1>
-            <p class="article-summary">
-                The article summary will go here. This will not show the full body. Maybe add a 'read more' button...
-            </p>
-        </article>
-    </section>
-
+    {{{ body }}}
 </body>
 </html>

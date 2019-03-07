@@ -6,6 +6,10 @@ let ArticleSchema = new Schema({
         type: String,
         required: true
     },
+    description: {
+        type: String,
+        required: true
+    },
     link: {
         type: String,
         required: true
@@ -15,6 +19,11 @@ let ArticleSchema = new Schema({
         ref: "Note"
     }
 });
+
+ArticleSchema.methods.addUrl = function(){
+    this.link = "https://www.nps.gov" + this.link;
+    return this.link;
+};
 
 let Article = mongoose.model('Article', ArticleSchema);
 
