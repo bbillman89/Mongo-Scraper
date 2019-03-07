@@ -1,7 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const axios = require('axios');
-const cheerio = require('cheerio');
 
 let PORT = process.env.PORT || 3000;
 
@@ -14,10 +12,10 @@ const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-/*const html_routes = require('./routes/htmlroutes.js');
-const api_routes = require('./routes/apiroutes.js');
-app.use(html_routes);
-app.use(api_routes);*/
+//const html_routes = require('./routes/html-routes.js')(app);
+const api_routes = require('./routes/api-routes.js');
+//app.use(html_routes);
+app.use(api_routes);
 
 let MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 let config = {useNewUrlParser: true};
