@@ -1,9 +1,9 @@
-let express = require('express');
-let router = express.Router();
 let db = require('../models');
 
-router.get('/', function(req, res){
-    res.render('articles');
-    /*db.Article(function(data){
-    })*/
-})
+module.exports = function(app){
+    
+    app.get('/', function(req, res){
+        res.render('articles');
+    })
+
+}

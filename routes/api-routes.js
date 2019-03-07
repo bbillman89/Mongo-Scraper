@@ -4,32 +4,19 @@ const db = require('../models');
 
 module.exports = function(app){
 
-    //Scraping the site
     app.get('/scrape', function(req, res){
-        
-        axios.get('https://old.reddit.com/r/webdev/').then(function(response){
-            let $ = cheerio.load(response.data);
-            let results = [];
-            $('p.title').each(function(ind, ele){
-                let title = $(ele).text();
-                let link = $(ele).children().attr('href');
-                results.push({
-                    title: title,
-                    link: link
-                });
-            });
-            console.log(results);
-        });
 
-
-        /*axios.get("https://www.nps.gov/index.htm").then(function(response){
+        axios.get("https://www.nps.gov/index.htm").then(function(response){
             var $ = cheerio.load(response.data);
 
             $('div .Feature').each(function(ind, ele){
                 let result = {};
 
                 result.title = $(this)
-                    .children('h3')
+                    .children('a').children('div').children('h3')
+                    .text().trim();
+                result.description = $(this)
+                    .children('p')
                     .text();
                 result.link = $(this)
                     .children('a')
@@ -41,18 +28,19 @@ module.exports = function(app){
                 .catch(function(e){
                     console.log(e);
                 })
+                console.log(result);
             })
-        })*/
+            res.send('scrape did something');
+        })
+    });
+
+    app.get('/articles', function(req, res){
+        db.Article.find({}).then(function(dbArt){
+            res.json(dbArt);
+        }).catch(function(e){
+            res.json(e);
+        })
     })
-
-    //Get all articles from the db
-
-
-    //Grab article by id, then "populate" with its note/s
-
-
-    //Save & Update the note/s associate with a specific article
-
 
 }
 
