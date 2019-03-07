@@ -22,12 +22,12 @@ module.exports = function(app){
                     .children('a')
                     .attr("href");
 
-                db.Article.create(result).then(function(dbArt){
+                /*db.Article.create(result).then(function(dbArt){
                     console.log(dbArt);
                 })
                 .catch(function(e){
                     console.log(e);
-                })
+                })*/
                 console.log(result);
             })
             res.send('scrape did something');

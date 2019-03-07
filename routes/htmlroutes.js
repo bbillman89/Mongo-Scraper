@@ -6,4 +6,8 @@ module.exports = function(app){
         res.render('articles');
     })
 
+    app.get('/saved', function(req, res){
+        res.render('saved');
+    })
+
 }
