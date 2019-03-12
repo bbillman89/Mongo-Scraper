@@ -1,7 +1,7 @@
 
 
 //save an article - change data-saved="false" to "true"
-$(document).on('click', '#  ', function() {
+$(document).on('click', '#save', function() {
     let thisId = $(this).attr('data-id');
 
     console.log(thisId);
