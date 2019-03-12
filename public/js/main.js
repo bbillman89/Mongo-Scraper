@@ -1,17 +1,34 @@
-$(document).ready(function(){
-
-    //save an article - change data-saved="false" to "true"
 
 
-    //add a note to an article
+//save an article - change data-saved="false" to "true"
+$(document).on('click', '#save', function() {
+    let thisId = $(this).attr('data-id');
+
+    console.log(thisId);
+
+    $.ajax({
+        method: 'POST',
+        url: '/saveTrue/' + thisId
+    })
+    .then(function(data) {
+        //console.log(data);
+    })
+});
+
+//add a note to an article
+
     
-        
-    //delete a single note
+//delete a single note
 
 
-    //delete all articles with data-saved="false" when hitting the clear articles button - include alert to handle if/else statement
+//delete ALL articles
+$(document).on('click', '#clear', () => {
+    $.post('/delete', bye => {
+        alert('db is cleared');
+        location.reload();
+    })
+});
+
+//delete article by id
 
 
-    //delete article by id
-
-})

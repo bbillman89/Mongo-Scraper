@@ -74,17 +74,17 @@ header nav button:hover {
   margin: auto;
   margin-top: 20pt;
 }
-.article-container article[data-id] {
+.article-container article {
   background-color: white;
   margin-top: 20pt;
 }
-.article-container article[data-id] .article-title {
+.article-container article .article-title {
   padding: 20pt;
   font-size: 25pt;
   background-color: #9fbe6a;
   color: #152200;
 }
-.article-container article[data-id] .article-summary {
+.article-container article .article-summary {
   border: 3pt solid #d4d4d4;
   border-top: none;
   padding: 20pt;

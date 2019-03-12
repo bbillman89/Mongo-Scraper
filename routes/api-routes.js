@@ -52,12 +52,29 @@ module.exports = function(app){
         })
     })
 
+    //delete articles
+    app.post('/delete', (req, res) => {
+        db.Article.remove({})
+            .then( del => {
+                res.json(del);
+            }).catch(e => {
+                res.json(e);
+            })
+    })
+
     //update saved to true
     app.post('/saveTrue/:id', (req, res) => {
-        db.Article.findOneAndUpdate({_id: req.params.id}, {set: {saved: true}})
-            .then( saved => {
-                res.json(saved);
-            }).catch(e => {
+    
+        db.Article.findOneAndUpdate(req.body)
+            .then(saved => {
+                console.log(saved);
+                return db.Article.updateOne({_id: saved._id}, {set: {saved: true}});
+            })
+            .then(stuff => {
+                console.log(stuff);
+                res.json(stuff);
+            })
+            .catch(e => {
                 res.json(e);
             })
     })

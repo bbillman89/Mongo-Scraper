@@ -10,12 +10,11 @@ $(document).ready(function(){
                 .append('<article data-id="' + ind._id + ' data-saved="' + ind.saved + '">'
                 + '<h1 class="article-title">'
                 + ind.title
-                + '<button id="remove">Remove'
-                + '</button>'
+                + '<button id="remove"' + 'data-id="' + ind._id + '">Remove</button>'
                 + '</h1>'
                 + '<div class="article-summary"'
-                + '<p>' + ind.description + '</p>'
-                + '<p>'
+                + '<p>' + ind.description
+                + '<br>'
                 + '<a href="https://www.nps.gov' + ind.link + '>' + 'https://www.nps.gov' + ind.link + '</a>'
                 + '</p>'
                 + '</div>'

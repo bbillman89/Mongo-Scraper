@@ -16,11 +16,10 @@ $(document).ready(function(){
         $.get('/unArt', function(articles){
             for (let ind of articles){
                 $('.article-container')
-                .append('<article data-id="' + ind._id + ' data-saved="' + ind.saved + '">'
+                .append('<article >'
                 + '<h1 class="article-title">'
                 + ind.title
-                + '<button id="save">Save'
-                + '</button>'
+                + '<button id="save"' + 'data-id="' + ind._id + '">Save</button>'
                 + '</h1>'
                 + '<p class="article-summary">'
                 + ind.description
@@ -34,6 +33,6 @@ $(document).ready(function(){
     
 })
 
-$(document).on('click', '#save', () => {
-    
-})
+/*$(document).on('click', '#save', () => {
+
+})*/
