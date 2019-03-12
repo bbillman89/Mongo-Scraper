@@ -15,7 +15,6 @@ h1 {
 
 a, ul {
   text-decoration: none;
-  color: white;
 }
 
 header {
@@ -31,6 +30,9 @@ header nav {
 }
 header nav h1 {
   font-size: 25pt;
+}
+header nav a {
+  color: white;
 }
 header nav ul {
   padding-top: 8pt;
@@ -89,6 +91,7 @@ header nav button:hover {
   border-top: none;
   padding: 20pt;
   font-size: 16pt;
+  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -65,7 +65,7 @@ module.exports = function(app){
     //update saved to true
     app.post('/saveTrue/:id', (req, res) => {
     
-        db.Article.findOneAndUpdate(req.body)
+        db.Article.findOne(req.body)
             .then(saved => {
                 console.log(saved);
                 return db.Article.updateOne({_id: saved._id}, {set: {saved: true}});

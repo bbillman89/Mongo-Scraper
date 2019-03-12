@@ -24,7 +24,7 @@ $(document).ready(function(){
                 + '<p class="article-summary">'
                 + ind.description
                 + '<br>'
-                + '<a href="https://www.nps.gov' + ind.link + '>' + 'https://www.nps.gov' + ind.link + '</a>'
+                + '<a href="https://www.nps.gov' + ind.link + '">' + 'https://www.nps.gov' + ind.link + '</a>'
                 + '</p>' 
                 + '</article>');
             }
